@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Wasibul Islam Wasib — Full-Stack Developer</title>
+<meta name="title" content="Wasibul Islam Wasib — Full-Stack Developer" />
+<meta name="description" content="Wasibul Islam Wasib, a solo full-stack web developer working with the MERN stack, Next.js, and React Native." />
+<meta name="keywords" content="Wasibul Islam Wasib, Wasib, Full-Stack Developer, MERN Stack, Next.js Developer, React Developer, Node.js Developer" />
+<meta name="author" content="Wasibul Islam Wasib" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://github.com/Wasib-2005" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://github.com/Wasib-2005" />
+<meta property="og:title" content="Wasibul Islam Wasib — Full-Stack Developer" />
+<meta property="og:description" content="Solo full-stack developer. MERN, Next.js, React Native." />
+<meta property="og:image" content="https://github.com/Wasib-2005.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Wasibul Islam Wasib — Full-Stack Developer" />
+<meta name="twitter:description" content="Solo full-stack developer. MERN, Next.js, React Native." />
+<meta name="twitter:image" content="https://github.com/Wasib-2005.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css" />
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#151515;
+  --bg1:#1d1c1b;
+  --bg2:#262523;
+  --line:#34322f;
+  --fg:#ebdbb2;
+  --dim:#928374;
+  --green:#b8bb26;
+  --orange:#fe8019;
+  --yellow:#fabd2f;
+  --aqua:#8ec07c;
+  --blue:#83a598;
+  --red:#fb4934;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --disp:'Bricolage Grotesque','JetBrains Mono',system-ui,sans-serif;
+}
+
+html{font-size:15px;scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  background-image:radial-gradient(rgba(235,219,178,.07) 1px,transparent 1px);
+  background-size:22px 22px;
+  color:var(--fg);font-family:var(--mono);line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+::selection{background:var(--green);color:var(--bg)}
+svg.i{width:1.1em;height:1.1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.18em;flex:none}
+
+/* waybar */
+.bar{
+  position:fixed;top:10px;left:10px;right:10px;z-index:50;
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  font-size:.78rem;
+}
+.mod{
+  display:flex;align-items:center;gap:4px;
+  background:rgba(29,28,27,.92);border:1px solid var(--line);border-radius:9px;
+  padding:4px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.mod.pad{padding:7px 13px;gap:14px}
+.ws a{padding:3px 11px;border-radius:6px;color:var(--dim);transition:color .15s,background .15s;white-space:nowrap}
+.ws a b{font-weight:700;margin-right:6px;color:var(--orange)}
+.ws a:hover{color:var(--fg)}
+.ws a.on{background:var(--green);color:var(--bg)}
+.ws a.on b{color:var(--bg)}
+.mod .g{color:var(--green)}
+.mod .y{color:var(--yellow)}
+
+main{width:100%;max-width:1600px;min-width:0;margin:0 auto;padding:0 20px}
+section{padding:80px 0 10px;scroll-margin-top:50px}
+#home{padding-top:120px}
+
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
+.sh span{color:var(--orange);font-size:.85rem}
+.sh h2{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.03em;line-height:1}
+.sh::after{content:'';flex:1;border-top:1px dashed var(--line);transform:translateY(-.4em)}
+
+/* window */
+.win{background:var(--bg1);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:border-color .2s,transform .2s}
+.win:hover{border-color:var(--green)}
+.tb{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:8px 14px;background:var(--bg2);border-bottom:1px solid var(--line);
+  font-size:.74rem;color:var(--dim);
+}
+.tb .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb .t em{font-style:normal;color:var(--green)}
+.tag{font-size:.68rem;padding:1px 8px;border-radius:4px;border:1px solid currentColor;flex:none}
+.tag.wip{color:var(--orange)}
+.tag.ok{color:var(--green)}
+.wb{padding:22px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px;align-items:center}
+.prompt{color:var(--dim);font-size:.85rem;margin-bottom:18px}
+.prompt b{color:var(--green);font-weight:500}
+.prompt u{text-decoration:none;color:var(--blue)}
+.hero h1{
+  font-family:var(--disp);font-weight:800;
+  font-size:clamp(3rem,7.6vw,6rem);line-height:.92;letter-spacing:-.04em;
+}
+.hero h1 span{display:block}
+.hero h1 .gr{color:var(--green)}
+.role{margin-top:22px;font-size:1rem;min-height:1.7em;color:var(--yellow);overflow-wrap:anywhere}
+.role::before{content:'> ';color:var(--dim)}
+.cur{display:inline-block;width:.6em;height:1.1em;background:var(--green);vertical-align:-.2em;margin-left:2px;animation:bl 1.05s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.hero .lead{margin-top:16px;color:var(--dim);max-width:34em;font-size:.92rem}
+.btns{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:9px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg1);
+  font-size:.82rem;transition:border-color .15s,background .15s,color .15s,transform .15s;
+}
+.btn:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+.btn.fill{background:var(--green);border-color:var(--green);color:var(--bg);font-weight:700}
+.btn.fill:hover{background:var(--yellow);border-color:var(--yellow);color:var(--bg)}
+
+/* neofetch */
+.nf-top{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.nf-top img{width:92px;height:92px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:var(--bg2);flex:none}
+.nf-top h3{font-size:1rem;font-weight:700}
+.nf-top h3 s{text-decoration:none;color:var(--green)}
+.nf-top h3 i{font-style:normal;color:var(--dim);font-weight:400}
+.nf-top p{font-size:.72rem;color:var(--dim);border-top:1px solid var(--line);margin-top:6px;padding-top:6px}
+.kv{display:flex;gap:14px;font-size:.82rem;padding:2px 0}
+.kv span{width:76px;flex:none;color:var(--orange)}
+.kv b{min-width:0;font-weight:400;color:var(--fg);overflow-wrap:anywhere}
+.pal{display:flex;gap:6px;margin-top:18px}
+.pal i{width:22px;height:14px;border-radius:3px;display:block}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px}
+.about p{margin-bottom:14px;font-size:.92rem;color:#d5c4a1}
+.about p:last-child{margin-bottom:0;color:var(--dim)}
+.about p::first-line{color:var(--fg)}
+.facts{list-style:none}
+.facts li{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line)}
+.facts li:first-child{padding-top:0}
+.facts li:last-child{border-bottom:0;padding-bottom:0}
+.facts svg{color:var(--green);margin-top:4px}
+.facts small{display:block;font-size:.68rem;color:var(--dim);line-height:1.3}
+.facts b{font-weight:500;font-size:.88rem}
+
+/* stack */
+.grp{padding:16px 0;border-bottom:1px dashed var(--line)}
+.grp:first-child{padding-top:0}
+.grp:last-child{border-bottom:0;padding-bottom:0}
+.grp h3{font-size:.8rem;font-weight:500;color:var(--green);margin-bottom:12px}
+.grp h3::before{content:'[';color:var(--dim)}
+.grp h3::after{content:']';color:var(--dim)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,108px),140px));gap:10px}
+.tile{
+  display:flex;flex-direction:column;align-items:center;gap:9px;
+  padding:16px 8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);
+  transition:border-color .15s,transform .15s,background .15s;
+}
+.tile:hover{border-color:var(--green);transform:translateY(-3px);background:var(--bg2)}
+.tile .ic{font-size:2.1rem;line-height:1;height:2.1rem;display:grid;place-items:center}
+.tile .ic svg.i{width:2rem;height:2rem;stroke-width:1.6;color:var(--aqua)}
+.tile .lb{font-size:.7rem;color:var(--dim);text-align:center;line-height:1.3;transition:color .15s}
+.tile:hover .lb{color:var(--fg)}
+
+/* projects */
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.proj{display:flex;flex-direction:column}
+.proj .wb{display:flex;flex-direction:column;flex:1}
+.proj h3{font-family:var(--disp);font-weight:800;font-size:1.65rem;letter-spacing:-.025em;line-height:1.1;margin-bottom:4px}
+.proj .meta{font-size:.74rem;color:var(--orange);margin-bottom:14px}
+.proj p{font-size:.88rem;color:var(--dim);margin-bottom:18px;flex:1}
+.proj .tech{display:flex;align-items:center;gap:12px;font-size:1.6rem;margin-bottom:18px;min-height:1.6rem}
+.proj .tech span{font-size:.7rem;border:1px solid var(--line);border-radius:4px;padding:0 8px;color:var(--fg)}
+.proj .go{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;color:var(--green)}
+.proj .go svg{transition:transform .15s}
+.proj:hover .go svg{transform:translate(3px,-3px)}
+.status{color:var(--dim);font-size:.85rem;grid-column:1/-1}
+.more{margin-top:24px;font-size:.82rem}
+.more a{color:var(--dim);display:inline-flex;gap:8px;align-items:center;border-bottom:1px dashed var(--dim);padding-bottom:2px;transition:color .15s}
+.more a:hover{color:var(--green);border-color:var(--green)}
+
+/* contact */
+.mail{
+  display:inline-block;word-break:break-all;
+  font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(1.5rem,5vw,3.4rem);
+  transition:color .15s;
+}
+.mail::before{content:'$ ';color:var(--dim);font-family:var(--mono);font-weight:400;font-size:.45em;letter-spacing:0;vertical-align:.4em;margin-right:6px}
+.mail:hover{color:var(--green)}
+.csub{color:var(--dim);font-size:.88rem;margin-bottom:18px;max-width:34em}
+.cl{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.cl a{
+  display:flex;align-items:center;gap:14px;padding:12px 14px;
+  border:1px solid var(--line);border-radius:8px;background:var(--bg);
+  transition:border-color .15s,transform .15s;
+}
+.cl a:hover{border-color:var(--green);transform:translateY(-2px)}
+.cl svg{color:var(--green);width:1.25em;height:1.25em}
+.cl small{display:block;font-size:.66rem;color:var(--dim);line-height:1.3}
+.cl span{font-size:.84rem;word-break:break-all}
+
+footer{
+  margin:70px 0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  padding:9px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg1);
+  font-size:.74rem;color:var(--dim);
+}
+footer b{color:var(--green);font-weight:500}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease,border-color .2s}
+.js .rv.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero,.about{grid-template-columns:1fr}
+  #home{padding-top:100px}
+}
+@media(max-width:640px){
+  .bar{justify-content:flex-start}
+  .bar>.mod.pad{display:none}
+  .ws{max-width:100%;overflow-x:auto;scrollbar-width:none}
+  .ws::-webkit-scrollbar{display:none}
+  .ws a{padding:3px 7px;font-size:.7rem}
+  .ws a span{display:inline}
+  .ws a b{margin-right:4px}
+  .pgrid{grid-template-columns:1fr}
+  .btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .btn{justify-content:center;padding:9px 10px}
+  .nf-top img{width:72px;height:72px}
+  .wb{padding:18px}
+}
+@media(max-width:380px){
+  main{padding-inline:12px}
+  .bar{left:8px;right:8px}
+  .ws{gap:1px}
+  .ws a{padding:3px 4px;font-size:.64rem}
+  .ws a b{display:none}
+  .wb{padding:14px}
+}
+@media(max-width:300px){
+  .ws{gap:0}
+  .ws a{padding:3px 2px;font-size:.58rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><path d="M12 2v4M8 6c0 1 .9 2 2 2s2-1 2-2M16 6c0 1-.9 2-2 2s-2-1-2-2M4 21h16v-6a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v6z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h13a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M4 4v14a2 2 0 0 0 2 2h14"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M1 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1M17 4a4 4 0 0 1 0 8M23 21v-1a6 6 0 0 0-4-5.6"/></symbol>
+    <symbol id="i-api" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></symbol>
+  </defs>
+</svg>
+
+<header class="bar">
+  <nav class="mod ws" id="ws">
+    <a href="#home" class="on"><b>1</b><span>home</span></a>
+    <a href="#about"><b>2</b><span>about</span></a>
+    <a href="#stack"><b>3</b><span>stack</span></a>
+    <a href="#projects"><b>4</b><span>projects</span></a>
+    <a href="#contact"><b>5</b><span>contact</span></a>
+  </nav>
+  <div class="mod pad"><span class="y" id="clock">--:--</span></div>
+</header>
+
+<main>
+
+  <section id="home">
+    <div class="hero">
+      <div>
+        <p class="prompt"><b>wasib</b>:~$ whoami</p>
+        <h1><span>Wasibul</span><span>Islam</span><span class="gr">Wasib</span></h1>
+        <p class="role"><span id="tw"></span><span class="cur"></span></p>
+        <p class="lead">Full-stack developer. React on the front, Node and MongoDB behind it, and I write the auth myself. I work alone and say little.</p>
+        <div class="btns">
+          <a class="btn fill" href="#projects"><svg class="i"><use href="#i-down"/></svg>Projects</a>
+          <a class="btn" href="https://docs.google.com/document/d/e/2PACX-1vQ2dxufnRa-EWvB6Ms33Puq4DzZs55pEQIjAZyUDkd0qFXf9BLLxd2UyL3Kmib-JSTzIpYsUWUErnTl/pub" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-file"/></svg>CV</a>
+          <a class="btn" href="https://github.com/Wasib-2005" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-github"/></svg>GitHub</a>
+          <a class="btn" href="#contact"><svg class="i"><use href="#i-mail"/></svg>Contact</a>
+        </div>
+      </div>
+
+      <div class="win">
+        <div class="tb"><span class="t">~ <em>neofetch</em></span></div>
+        <div class="wb">
+          <div class="nf-top">
+            <img src="https://github.com/Wasib-2005.png" alt="Wasibul Islam Wasib" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/201919312?v=4'" />
+            <div>
+              <h3><s>wasib</s></h3>
+              <p>full-stack · solo · minimal</p>
+            </div>
+          </div>
+          <div class="kv"><span>os</span><b>Windows, Fedora</b></div>
+          <div class="kv"><span>stack</span><b>MERN, Next.js</b></div>
+          <div class="kv"><span>langs</span><b>Bengali, English</b></div>
+          <div class="pal" aria-hidden="true">
+            <i style="background:var(--red)"></i><i style="background:var(--orange)"></i><i style="background:var(--yellow)"></i><i style="background:var(--green)"></i><i style="background:var(--aqua)"></i><i style="background:var(--blue)"></i><i style="background:var(--fg)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sh rv"><span>02</span><h2>About</h2></div>
+    <div class="about">
+      <div class="win rv">
+        <div class="tb"><span class="t">~/<em>about</em></span></div>
+        <div class="wb">
+          <p>I like knowing how things work, so I pick technology apart and set it up my own way. Sometimes there's a reason, sometimes I just want to see if it can be done.</p>
+          <p>On the web side I do all of it: the interface, the API, the database, and the login and permissions around them.</p>
+        </div>
+      </div>
+      <div class="win rv">
+        <div class="tb"><span class="t">~/<em>languages</em></span></div>
+        <div class="wb">
+          <ul class="facts">
+            <li><svg class="i"><use href="#i-chat"/></svg><div><small>languages</small><b>Bengali, English</b></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="sh rv"><span>03</span><h2>Stack</h2></div>
+    <div class="win rv">
+      <div class="tb"><span class="t">~/<em>stack.toml</em></span></div>
+      <div class="wb">
+        <div class="grp"><h3>languages</h3><div class="tiles" id="tLang"></div></div>
+        <div class="grp"><h3>frameworks</h3><div class="tiles" id="tWeb"></div></div>
+        <div class="grp"><h3>security + api</h3><div class="tiles" id="tSec"></div></div>
+        <div class="grp"><h3>tools</h3><div class="tiles" id="tTool"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sh rv"><span>04</span><h2>Projects</h2></div>
+    <div class="pgrid" id="projectsList"><p class="status">loading pinned repos…</p></div>
+    <p class="more rv"><a href="https://github.com/Wasib-2005" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-github"/></svg>everything else on github</a></p>
+  </section>
+
+  <section id="contact">
+    <div class="sh rv"><span>05</span><h2>Contact</h2></div>
+    <div class="win rv">
+      <div class="tb"><span class="t">~/<em>contact</em></span></div>
+      <div class="wb">
+        <p class="csub">Open to collabs and opportunities. Email is the fastest way.</p>
+        <a class="mail" href="mailto:wasibulislam8984@gmail.com">wasibulislam8984@gmail.com</a>
+        <div class="cl">
+          <a href="mailto:wasib_2005@proton.me"><svg class="i"><use href="#i-mail"/></svg><div><small>proton</small><span>wasib_2005@proton.me</span></div></a>
+          <a href="tel:01855005975"><svg class="i"><use href="#i-phone"/></svg><div><small>phone</small><span>01855005975</span></div></a>
+          <a href="https://github.com/Wasib-2005" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-github"/></svg><div><small>github</small><span>Wasib-2005</span></div></a>
+          <a href="https://www.linkedin.com/in/wasib2005" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-linkedin"/></svg><div><small>linkedin</small><span>wasib2005</span></div></a>
+          <a href="https://wasib-2005.github.io/Portfolio" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-globe"/></svg><div><small>site</small><span>wasib-2005.github.io/Portfolio</span></div></a>
+          <a href="https://docs.google.com/document/d/e/2PACX-1vQ2dxufnRa-EWvB6Ms33Puq4DzZs55pEQIjAZyUDkd0qFXf9BLLxd2UyL3Kmib-JSTzIpYsUWUErnTl/pub" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-file"/></svg><div><small>cv</small><span>read online</span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span><b>●</b> © 2026 Wasibul Islam Wasib</span>
+  </footer>
+
+</main>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* clock (Dhaka) */
+(function(){
+  const el=document.getElementById('clock');
+  function t(){
+    try{
+      const d=new Date();
+      const day=d.toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short'});
+      const tm=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+      el.textContent=day+'  '+tm;
+    }catch(e){el.textContent=new Date().toLocaleTimeString()}
+  }
+  t();setInterval(t,15000);
+})();
+
+/* typewriter */
+(function(){
+  const el=document.getElementById('tw');
+  const ph=['Web Developer','React · Next.js · Node · Express · MongoDB','Man of few words','Curious by nature'];
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=ph[0];return}
+  let p=0,c=0,del=false;
+  function tick(){
+    const cur=ph[p];
+    if(!del){
+      c++;el.textContent=cur.slice(0,c);
+      if(c===cur.length){del=true;return setTimeout(tick,2000)}
+      setTimeout(tick,60);
+    }else{
+      c--;el.textContent=cur.slice(0,c);
+      if(c===0){del=false;p=(p+1)%ph.length;return setTimeout(tick,280)}
+      setTimeout(tick,28);
+    }
+  }
+  tick();
+})();
+
+/* workspace nav highlight */
+(function(){
+  const links=[...document.querySelectorAll('#ws a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  function upd(){
+    const y=scrollY+140;
+    let cur=0;
+    secs.forEach((s,i)=>{if(s&&s.offsetTop<=y)cur=i});
+    if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)cur=secs.length-1;
+    links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+  }
+  addEventListener('scroll',upd,{passive:true});
+  addEventListener('resize',upd);
+  upd();
+})();
+
+/* reveal */
+const io=('IntersectionObserver' in window)?new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+}),{threshold:.08}):null;
+function watch(el){if(io)io.observe(el);else el.classList.add('on')}
+document.querySelectorAll('.rv').forEach(watch);
+
+/* stack tiles */
+(function(){
+  const ic=c=>`<i class="${c}"></i>`;
+  const sv=id=>`<svg class="i"><use href="#${id}"/></svg>`;
+  const data={
+    tLang:[
+      ['HTML',ic('devicon-html5-plain colored')],
+      ['CSS',ic('devicon-css3-plain colored')],
+      ['JavaScript',ic('devicon-javascript-plain colored')],
+      ['TypeScript',ic('devicon-typescript-plain colored')],
+      ['Python',ic('devicon-python-plain colored')]
+    ],
+    tWeb:[
+      ['React',ic('devicon-react-original colored')],
+      ['Next.js',ic('devicon-nextjs-plain')],
+      ['Node.js',ic('devicon-nodejs-plain colored')],
+      ['Express',ic('devicon-express-original')],
+      ['MongoDB',ic('devicon-mongodb-plain colored')]
+    ],
+    tSec:[
+      ['JWT',sv('i-key')],
+      ['Argon2',sv('i-lock')],
+      ['Role-based access',sv('i-users')],
+      ['REST design',sv('i-api')],
+      ['Firebase',ic('devicon-firebase-plain colored')]
+    ],
+    tTool:[
+      ['Git',ic('devicon-git-plain colored')],
+      ['GitHub',ic('devicon-github-original')],
+      ['Debian',ic('devicon-debian-plain colored')],
+      ['Fedora',ic('devicon-fedora-plain colored')]
+    ]
+  };
+  Object.keys(data).forEach(id=>{
+    document.getElementById(id).innerHTML=data[id].map(t=>`<div class="tile"><span class="ic">${t[1]}</span><span class="lb">${t[0]}</span></div>`).join('');
+  });
+})();
+
+/* projects: GitHub pinned repos */
+(function(){
+  const USER='Wasib-2005';
+  const API='https://pinned.berrysauce.dev/get/'+USER;
+
+  const details={
+    'Inventory-Management-System':{
+      title:'Inventory Management System',
+      meta:'MERN · full-stack web app',
+      tag:['in progress','wip'],
+      icons:['devicon-react-original colored','devicon-nodejs-plain colored','devicon-express-original','devicon-mongodb-plain colored'],
+      desc:'Tracks stock across multiple warehouses along with daily retail sales. Auth is written from scratch and runs over HTTPS only, with role-based access control, Argon2 password hashing and logging. The UI uses infinite scroll, debounced fetching and inline metadata editing.'
+    },
+    'Manga-Nest':{
+      title:'Manga Nest',
+      meta:'React Native, Expo · Android app',
+      tag:['done','ok'],
+      icons:['devicon-react-original colored','devicon-javascript-plain colored'],
+      chips:['Expo'],
+      desc:'Android manga reader that works offline with imported PDFs, local image folders and scraped chapters. There is no database: the library and reading progress are plain JSON files that can be backed up and moved, and media is cached in the app\'s private storage.'
+    }
+  };
+  const langIcons={
+    'JavaScript':'devicon-javascript-plain colored','TypeScript':'devicon-typescript-plain colored',
+    'Python':'devicon-python-plain colored','HTML':'devicon-html5-plain colored','CSS':'devicon-css3-plain colored'
+  };
+
+  const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const root=document.getElementById('projectsList');
+
+  function item(repo){
+    const d=details[repo.name];
+    const url=`https://github.com/${USER}/${repo.name}`;
+    const title=d?d.title:repo.name.replace(/[-_]/g,' ');
+    const meta=d?d.meta:(repo.language||'repo');
+    const desc=d?d.desc:(repo.description||'No description provided.');
+    let icons=[],chips=[];
+    if(d){icons=d.icons||[];chips=d.chips||[];}
+    else if(repo.language&&langIcons[repo.language]){icons=[langIcons[repo.language]];}
+    const tech=icons.map(c=>`<i class="${c}"></i>`).join('')+chips.map(c=>`<span>${esc(c)}</span>`).join('');
+    const tag=d&&d.tag?`<span class="tag ${d.tag[1]}">${esc(d.tag[0])}</span>`:'';
+    return `<a class="win proj rv" href="${url}" target="_blank" rel="noopener noreferrer">
+      <div class="tb"><span class="t">~/projects/<em>${esc(repo.name.toLowerCase())}</em></span>${tag}</div>
+      <div class="wb">
+        <h3>${esc(title)}</h3>
+        <div class="meta">${esc(meta)}</div>
+        <p>${esc(desc)}</p>
+        <div class="tech">${tech}</div>
+        <span class="go">view on github <svg class="i"><use href="#i-arrow"/></svg></span>
+      </div>
+    </a>`;
+  }
+
+  function render(list){
+    root.innerHTML=list.map(item).join('');
+    root.querySelectorAll('.rv').forEach(watch);
+  }
+  const fallback=Object.keys(details).map(name=>({name}));
+
+  const ctrl=('AbortController' in window)?new AbortController():null;
+  const timer=ctrl?setTimeout(()=>ctrl.abort(),6000):null;
+  fetch(API,ctrl?{signal:ctrl.signal}:{})
+    .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+    .then(data=>{
+      if(!Array.isArray(data)||!data.length)throw new Error('empty');
+      render(data.map(r=>({name:r.name,description:r.description,language:r.language})));
+    })
+    .catch(()=>render(fallback))
+    .finally(()=>{if(timer)clearTimeout(timer)});
+})();
+</script>
+</body>
+</html>
